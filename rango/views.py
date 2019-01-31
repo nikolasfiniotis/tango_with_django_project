@@ -25,15 +25,12 @@ def index(request):
 	return render(request, 'rango/index.html', context_dict)
 
 
-	
 def about(request):
-	# return HttpResponse("Rango says here is the about page. <a href='/rango/'>Index</a>")\
-	
-	context_dict = {'boldmessage' : "Rango says here is the about page. This tutorial has been put together by Nikolas Finiotis"}
-	
+	context_dict = {}
+
 	return render(request, 'rango/about.html', context=context_dict)
 
-	
+
 def show_category(request, category_name_slug):
 	# Create a context dictionary which we can pass
 	# to the template rendering engine.
@@ -64,6 +61,7 @@ def show_category(request, category_name_slug):
 		
 	# Go render the response and return it to the client.
 	return render(request, 'rango/category.html', context_dict)
+
 
 def add_category(request):
 	form = CategoryForm()
