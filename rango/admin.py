@@ -11,6 +11,5 @@ class PageAdmin(admin.ModelAdmin):
 
 # Update the registration to include this customised interface
 admin.site.register(Category, CategoryAdmin)
-
 admin.site.register(Page, PageAdmin)
 admin.site.register(UserProfile)
